@@ -133,7 +133,7 @@ public class Cifa {
 				else
 				{
 					System.out.println("Unknown");
-					return;
+					System.exit(0);
 				}
 				
 			}
