@@ -98,7 +98,7 @@ public class Cifa {
     public static void main(String[] args) throws IOException {
     	String []reserve={"BEGIN","END","FOR","IF","THEN","ELSE"};
     	String []isreserve={"Begin","End","For","If","Then","Else"};
-    	String []symbol= { ":", "+", "*", ",", "(", ")", ":=","="};
+    	String []symbol= { ":", "+", "*", ",", "(", ")", ":="};
     	String []issymbol= { "Colon", "Plus", "Star", "Comma", "LParenthesis", "RParenthesis", "Assign"};
     	Cifa la=new Cifa();
     	File file=new File(args[0]);
@@ -134,18 +134,17 @@ public class Cifa {
 			else if(afterfile[index]!=' ')
 			{
 				temp+=afterfile[index];
-				while(la.isSymbol( String.valueOf(afterfile[index+1]),symbol)!=-1)
-				{
-					index++;
-					temp+=afterfile[index];
+				if( temp.equals(":") ) {
+					if(afterfile[index+1]=='=') {
+						temp+="=";
+						index++;
+					}
+						
 				}
-				
 				if(la.isSymbol(temp, symbol)!=-1)
 				{
 					System.out.println(issymbol[la.isSymbol(temp, symbol)]);
 					temp="";
-					index++;
-					continue;
 				}
 				else
 				{
