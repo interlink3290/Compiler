@@ -79,7 +79,11 @@ public class Cifa {
 			return false;
 	}
 		
-    public static void main(String[] args) throws IOException {    	
+    public static void main(String[] args) throws IOException {
+    	int i=0,l=args.length;
+		for(i=0 ; i<l ;i++) {
+			System.out.println(args[i]);
+		}
     	String []reserve={"BEGIN","END","FOR","IF","THEN","ELSE"};
     	String []isreserve={"Begin","End","For","If","Then","Else"};
     	String []symbol= { ":", "+", "*", ",", "(", ")", ":=","="};
