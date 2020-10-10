@@ -6,6 +6,22 @@ import java.util.*;
 import java.io.*;
 
 public class Cifa {
+	public  String txt2String(File file) throws IOException
+	{
+		StringBuilder result =new StringBuilder();
+		try {
+			BufferedReader br= new BufferedReader(new FileReader(file));
+			String s=null;
+			while((s=br.readLine())!=null){
+				result.append(System.lineSeparator()+s);
+			}
+			br.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return result.toString();
+	}
 	public String linkString(String[] arg) {
 		String temp ="";
 		int i=0,l=arg.length;
