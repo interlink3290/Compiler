@@ -44,6 +44,10 @@ public class Cifa {
 					afterfile[index]=sourcefile[i];
 					index++;
 				}
+				else {
+					afterfile[index]=' ';
+					index++;
+				}
 			}
 			index++;
 			afterfile[index]='\0';
