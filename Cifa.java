@@ -133,7 +133,8 @@ public class Cifa {
 					index++;
 					temp+=afterfile[index];
 				}
-				System.out.println("Int("+temp+")");
+				int x = Integer.parseInt(temp);
+				System.out.println("Int("+x+")");
 			}
 			else if(afterfile[index]!=' ')
 			{
