@@ -80,16 +80,13 @@ public class Cifa {
 	}
 		
     public static void main(String[] args) throws IOException {
-    	int i=0,l=args.length;
-		for(i=0 ; i<l ;i++) {
-			System.out.println(args[i]);
-		}
     	String []reserve={"BEGIN","END","FOR","IF","THEN","ELSE"};
     	String []isreserve={"Begin","End","For","If","Then","Else"};
     	String []symbol= { ":", "+", "*", ",", "(", ")", ":=","="};
     	String []issymbol= { "Colon", "Plus", "Star", "Comma", "LParenthesis", "RParenthesis", "Assign"};
     	Cifa la=new Cifa();
-    	String source=la.linkString(args);
+    	File file=new File(args[0]);
+		String source=la.txt2String(file);
 		char sourcefile[] = source.toCharArray();  
 		char afterfile[]=la.preTreatment(sourcefile);
 		int index=0;
