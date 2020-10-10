@@ -14,7 +14,6 @@ public class Cifa {
 		}
 		return temp;
 	}
-	//对文本进行预处理
 	public  char[] preTreatment(char[] sourcefile)
 	{
 		char []afterfile = new char[10000];
@@ -35,7 +34,6 @@ public class Cifa {
 		}
 		return afterfile;
 	}
-	//判断是否为保留字，并返回编号
 	public int isReserve(String s,String []reserve)
 	{
 		int index=-1;
@@ -49,7 +47,6 @@ public class Cifa {
 		}
 		return index;
 	}
-	//判断是否为符号，并返回编号
 	public int isSymbol(String s,String []symbol)
 	{
 		int index=-1;
@@ -63,7 +60,6 @@ public class Cifa {
 		}
 		return index;
 	}
-	//判断是否为数字
 	public  boolean isDigit(char c)
 	{
 		if(c>='0'&&c<='9')
@@ -73,7 +69,6 @@ public class Cifa {
 		else
 			return false;
 	}
-	//判断是否为字母
 	public boolean isLetter(char c)
 	{
 		if((c>='a'&&c<='z')||(c>='A'&&c<'Z'))
